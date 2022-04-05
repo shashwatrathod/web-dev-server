@@ -1,0 +1,24 @@
+{
+  "name": "web-dev-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shashwatrathod/web-dev-server.git"
+  },
+  "author": "Shashwat Rathod",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shashwatrathod/web-dev-server/issues"
+  },
+  "type": "module",
+  "homepage": "https://github.com/shashwatrathod/web-dev-server#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  }
+}
