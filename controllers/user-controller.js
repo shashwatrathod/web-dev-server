@@ -3,6 +3,7 @@ import users from "./users.js";
 const userController = (app) => {
   app.get("/api/users", findAllUsers);
   app.get("/api/users/:uid", findUsersById);
+  app.post("/api/users", createUser);
 };
 
 const findAllUsers = (req, res) => {
@@ -23,6 +24,13 @@ const findUsersById = (req, res) => {
 
 const findUsersByType = (type) => {
   return users.filter((user) => user.type === type);
+};
+
+const createUser = (req, res) => {
+  const newUser = req.body;
+  newUser._id = new Date().getTime() + "";
+  users.push(newUser);
+  res.json(newUser);
 };
 
 export default userController;

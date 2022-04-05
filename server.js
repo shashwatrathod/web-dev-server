@@ -4,6 +4,8 @@ import userController from "./controllers/user-controller.js";
 
 const app = express();
 
+app.use(express.json());
+
 helloController(app);
 userController(app);
 
