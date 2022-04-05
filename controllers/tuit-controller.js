@@ -1,4 +1,6 @@
-import tuits from "./tuits.js";
+import tweets from "./tuits.js";
+
+let tuits = tweets;
 
 const tuitController = (app) => {
   app.post("/api/tuits", createTuit);
@@ -11,7 +13,7 @@ const createTuit = (req, res) => {
   const newTuit = req.body;
   newTuit._id = new Date().getTime() + "";
   newTuit.likes = 0;
-  tuits.push(newTuit);
+  tuits = [newTuit, ...tuits];
   res.json(newTuit);
 };
 
