@@ -1,10 +1,9 @@
 import express from "express";
+import helloController from "./controllers/hello-controller.js";
 
 const app = express();
 
-app.get("/hello", (req, res) => {
-  res.send("Hello World!");
-});
+helloController(app);
 
 const port = process.env.PORT || 4000;
 app.listen(port, () => {
